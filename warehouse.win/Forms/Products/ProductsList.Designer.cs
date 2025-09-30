@@ -30,13 +30,6 @@ namespace warehouse.win.Forms
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            code = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
-            CountUnit = new DataGridViewTextBoxColumn();
-            date = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             txtPassword = new TextBox();
             txtUserName = new TextBox();
             textBox1 = new TextBox();
@@ -57,6 +50,9 @@ namespace warehouse.win.Forms
             btnLogin = new Button();
             button1 = new Button();
             button2 = new Button();
+            id = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            ProductCountUnit = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -65,7 +61,7 @@ namespace warehouse.win.Forms
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column4, Column1, code, ProductName, CountUnit, date, Column3 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id, ProductName, ProductCountUnit });
             dataGridView1.Location = new Point(12, 136);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RightToLeft = RightToLeft.Yes;
@@ -73,43 +69,6 @@ namespace warehouse.win.Forms
             dataGridView1.Size = new Size(951, 228);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "ردیف";
-            Column4.Name = "Column4";
-            Column4.Width = 40;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "شماره سند";
-            Column1.Name = "Column1";
-            // 
-            // code
-            // 
-            code.HeaderText = "کد کالا";
-            code.Name = "code";
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "نام کالا";
-            ProductName.Name = "ProductName";
-            ProductName.Width = 300;
-            // 
-            // CountUnit
-            // 
-            CountUnit.HeaderText = "واحد";
-            CountUnit.Name = "CountUnit";
-            // 
-            // date
-            // 
-            date.HeaderText = "تاریخ";
-            date.Name = "date";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "مقدار";
-            Column3.Name = "Column3";
             // 
             // txtPassword
             // 
@@ -289,6 +248,23 @@ namespace warehouse.win.Forms
             button2.Text = "بازگشت";
             button2.UseVisualStyleBackColor = true;
             // 
+            // id
+            // 
+            id.HeaderText = "ردیف";
+            id.Name = "id";
+            id.Width = 40;
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "نام کالا";
+            ProductName.Name = "ProductName";
+            ProductName.Width = 300;
+            // 
+            // ProductCountUnit
+            // 
+            ProductCountUnit.HeaderText = "واحد";
+            ProductCountUnit.Name = "ProductCountUnit";
+            // 
             // ProductsList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -325,13 +301,6 @@ namespace warehouse.win.Forms
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn code;
-        private DataGridViewTextBoxColumn ProductName;
-        private DataGridViewTextBoxColumn CountUnit;
-        private DataGridViewTextBoxColumn date;
-        private DataGridViewTextBoxColumn Column3;
         private TextBox txtPassword;
         private TextBox txtUserName;
         private TextBox textBox1;
@@ -352,5 +321,8 @@ namespace warehouse.win.Forms
         private Button btnLogin;
         private Button button1;
         private Button button2;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn ProductCountUnit;
     }
 }
